@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangat Biryani — The Color of Real Biryani | Sainik Nagar, Uttam Nagar, Delhi</title>
+<meta name="description" content="Rangat Biryani — Premium dum biryani cloud kitchen in Sainik Nagar, Uttam Nagar, West Delhi. Real saffron, aged basmati, 45-min dum. Order on Zomato or WhatsApp. Delivery 5PM–11PM daily.">
+<meta name="keywords" content="biryani delivery Uttam Nagar, biryani Sainik Nagar, dum biryani Delhi, chicken biryani delivery West Delhi, Rangat Biryani, cloud kitchen Delhi">
+<meta property="og:title" content="Rangat Biryani — The Color of Real Biryani">
+<meta property="og:description" content="Premium dum biryani delivered hot to your door. Real saffron, aged basmati, 45-minute slow dum. Sainik Nagar, Uttam Nagar.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Rangat Biryani",
+  "description": "Premium home cloud kitchen serving authentic dum biryani in Sainik Nagar, Uttam Nagar, West Delhi",
+  "telephone": "+919716112949",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sainik Nagar",
+    "addressLocality": "Uttam Nagar",
+    "addressRegion": "West Delhi",
+    "postalCode": "110059",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 17:00-23:00",
+  "servesCuisine": "Indian, Mughal, Biryani",
+  "priceRange": "₹₹"
+}
+</script>
+
+<style>
+  :root {
+    --black: #0A0806;
+    --gold: #E8A020;
+    --gold-light: #F0B030;
+    --gold-dim: rgba(212,148,26,0.15);
+    --crimson: #E8293A;
+    --cream: #FDF8EF;
+    --cream-dim: rgba(253,248,239,0.07);
+    --text-muted: rgba(253,248,239,0.55);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ========== PAGES ========== */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ========== NAV ========== */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,8,6,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212,148,26,0.18);
+    padding: 0 24px;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer; text-decoration: none;
+  }
+  .nav-logo-mark {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--gold), var(--crimson));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-family: 'Cinzel', serif; font-weight: 700;
+    color: var(--black); line-height: 1;
+    flex-shrink: 0;
+  }
+  .nav-logo-text { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; color: var(--gold); letter-spacing: 0.04em; }
+  .nav-links {
+    display: flex; align-items: center; gap: 4px;
+  }
+  .nav-links a {
+    font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500;
+    color: var(--cream); opacity: 0.7; text-decoration: none;
+    padding: 6px 12px; border-radius: 20px;
+    transition: all 0.2s; cursor: pointer;
+    white-space: nowrap;
+  }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); background: var(--gold-dim); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black) !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    padding: 8px 16px !important;
+    border-radius: 24px !important;
+    font-size: 13px !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--cream); border-radius: 2px; transition: all 0.3s; }
+  .mobile-menu {
+    display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 999;
+    background: rgba(10,8,6,0.98); border-bottom: 1px solid rgba(212,148,26,0.2);
+    padding: 16px 24px 24px; flex-direction: column; gap: 4px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--cream); text-decoration: none; font-size: 15px; font-weight: 500;
+    padding: 12px 16px; border-radius: 8px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .mobile-menu a:hover, .mobile-menu a.active { background: var(--gold-dim); color: var(--gold); }
+  .mobile-menu .mobile-cta {
+    background: var(--gold); color: var(--black) !important; font-weight: 700 !important;
+    text-align: center; margin-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  /* ========== FLOATERS ========== */
+  .float-wa {
+    position: fixed; bottom: 24px; right: 20px; z-index: 900;
+    background: #25D366; color: white;
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer; text-decoration: none;
+  }
+  .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.7); }
+  .float-zomato {
+    position: fixed; bottom: 24px; left: 20px; z-index: 900;
+    background: #E23744; color: white;
+    padding: 12px 18px; border-radius: 28px;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 20px rgba(226,55,68,0.45);
+    transition: transform 0.2s; cursor: pointer; text-decoration: none;
+    font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600;
+    white-space: nowrap;
+  }
+  .float-zomato:hover { transform: scale(1.05) translateY(-2px); }
+
+  /* ========== URGENCY BANNER ========== */
+  #urgency-banner {
+    background: linear-gradient(90deg, rgba(232,41,58,0.12), rgba(212,148,26,0.12), rgba(232,41,58,0.12));
+    background-size: 200% 100%;
+    animation: bannerShimmer 4s linear infinite;
+    border-bottom: 1px solid rgba(212,148,26,0.2);
+    text-align: center; padding: 9px 16px;
+    font-size: 13px; font-weight: 500; color: var(--gold);
+    position: fixed; top: 64px; left: 0; right: 0; z-index: 990;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  @keyframes bannerShimmer { 0%{background-position:0% 0} 100%{background-position:200% 0} }
+  #urgency-banner .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  #urgency-banner .open .status-dot { background: #4ade80; box-shadow: 0 0 8px #4ade80; animation: pulse 2s infinite; }
+  #urgency-banner .closed .status-dot { background: var(--crimson); }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  /* ========== HERO ========== */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 100px 24px 60px;
+    overflow: hidden;
+  }
+  #particles-canvas {
+    position: absolute; inset: 0; z-index: 0;
+    pointer-events: none;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,148,26,0.1) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 80% 80%, rgba(232,41,58,0.07) 0%, transparent 60%),
+                var(--black);
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 720px; }
+  .hero-crown {
+    width: 80px; height: 80px; margin: 0 auto 24px;
+    background: linear-gradient(135deg, #E8A020 0%, #E8293A 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+    box-shadow: 0 0 60px rgba(212,148,26,0.35), 0 0 120px rgba(212,148,26,0.1);
+    animation: crownGlow 3s ease-in-out infinite alternate;
+  }
+  @keyframes crownGlow {
+    from { box-shadow: 0 0 40px rgba(212,148,26,0.3), 0 0 80px rgba(212,148,26,0.08); }
+    to   { box-shadow: 0 0 80px rgba(212,148,26,0.55), 0 0 160px rgba(212,148,26,0.18); }
+  }
+  .hero-label {
+    font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold);
+    opacity: 0.8; margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Cinzel', serif; font-size: clamp(36px, 8vw, 72px);
+    font-weight: 900; line-height: 1.05; letter-spacing: 0.02em;
+    color: var(--cream); margin-bottom: 8px;
+  }
+  .hero-title span { color: var(--gold); }
+  .hero-tagline {
+    font-family: 'Cinzel', serif; font-size: clamp(14px, 2.5vw, 20px);
+    font-weight: 400; color: var(--gold); letter-spacing: 0.12em;
+    margin-bottom: 16px; font-style: italic;
+  }
+  .hero-sub {
+    font-size: 15px; color: var(--text-muted); font-weight: 400; line-height: 1.6;
+    margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto;
+  }
+  .hero-sub em { color: var(--cream); font-style: normal; font-weight: 500; }
+  .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), #c4840a);
+    color: var(--black); font-family: 'Outfit', sans-serif;
+    font-size: 15px; font-weight: 700; padding: 14px 28px;
+    border-radius: 32px; border: none; cursor: pointer;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.25s; box-shadow: 0 4px 24px rgba(212,148,26,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(212,148,26,0.55); }
+  .btn-secondary {
+    background: rgba(37,211,102,0.12); color: #4ade80;
+    border: 1.5px solid rgba(37,211,102,0.4);
+    font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600;
+    padding: 14px 28px; border-radius: 32px; cursor: pointer;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.25s;
+  }
+  .btn-secondary:hover { background: rgba(37,211,102,0.2); border-color: #4ade80; transform: translateY(-2px); }
+  .hero-stats {
+    display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+    padding-top: 32px; border-top: 1px solid rgba(212,148,26,0.15);
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; color: var(--gold); }
+  .hero-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero-crown-logo { margin-bottom: 16px; text-align: center; }
+  .scroll-hint {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    z-index: 2; color: var(--text-muted); font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.2em; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    animation: scrollBounce 2.5s ease-in-out infinite;
+  }
+  .scroll-hint::after { content: ''; width: 1px; height: 36px; background: linear-gradient(to bottom, var(--gold), transparent); }
+  @keyframes scrollBounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ========== SECTIONS ========== */
+  section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--crimson); margin-bottom: 12px; display: block;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif; font-size: clamp(26px, 5vw, 44px);
+    font-weight: 700; line-height: 1.15; color: var(--cream); margin-bottom: 16px;
+  }
+  .section-title span { color: var(--gold); }
+  .section-desc { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 560px; }
+  .section-header { margin-bottom: 48px; }
+
+  /* divider */
+  .gold-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--crimson));
+    border-radius: 2px; margin: 16px 0;
+  }
+  .gold-divider.center { margin: 16px auto; }
+
+  /* full-width section wrapper */
+  .section-full { padding: 80px 0; background: var(--black); position: relative; }
+  .section-full::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+    pointer-events: none;
+  }
+  .section-full.alt-bg { background: #0f0d0b; }
+  .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* ========== WHY RANGAT ========== */
+  .features-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;
+  }
+  .feature-card {
+    background: rgba(253,248,239,0.04);
+    border: 1px solid rgba(212,148,26,0.15);
+    border-radius: 16px; padding: 28px 24px;
+    transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .feature-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(212,148,26,0.06), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .feature-card:hover { border-color: rgba(212,148,26,0.4); transform: translateY(-4px); }
+  .feature-card:hover::before { opacity: 1; }
+  .feature-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    background: var(--gold-dim); border: 1px solid rgba(212,148,26,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 16px;
+  }
+  .feature-title { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 600; color: var(--cream); margin-bottom: 8px; }
+  .feature-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ========== MENU CARDS ========== */
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .menu-card {
+    background: #100e0b; border: 1px solid rgba(212,148,26,0.13);
+    border-radius: 16px; overflow: hidden;
+    transition: all 0.3s; position: relative;
+  }
+  .menu-card:hover { border-color: rgba(212,148,26,0.35); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.5); }
+  .menu-card-img {
+    width: 100%; aspect-ratio: 4/3; background: #1a1510;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .img-placeholder {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px; width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+      -45deg, #1a1510 0px, #1a1510 10px, #1c1712 10px, #1c1712 20px
+    );
+  }
+  .img-placeholder-icon { font-size: 40px; opacity: 0.4; }
+  .img-placeholder-text { font-size: 11px; color: var(--text-muted); text-align: center; letter-spacing: 0.1em; text-transform: uppercase; max-width: 140px; }
+  .discount-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: #16a34a; color: white;
+    font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+  .nonveg-dot {
+    position: absolute; top: 12px; right: 12px;
+    width: 20px; height: 20px; border: 1.5px solid var(--crimson); border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nonveg-dot::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--crimson); }
+  .menu-card-body { padding: 18px; }
+  .menu-card-title { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600; color: var(--cream); margin-bottom: 4px; }
+  .menu-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+  .menu-card-serving { font-size: 11px; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+  .menu-card-price { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .price-current { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--gold); }
+  .price-mrp { font-size: 14px; color: var(--text-muted); text-decoration: line-through; }
+  .btn-order-card {
+    width: 100%; padding: 11px; border-radius: 10px;
+    background: var(--gold-dim); border: 1px solid rgba(212,148,26,0.3); color: var(--gold);
+    font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: all 0.2s; text-decoration: none; display: block; text-align: center;
+  }
+  .btn-order-card:hover { background: var(--gold); color: var(--black); }
+
+  /* ========== HOW TO ORDER ========== */
+  .steps-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0;
+    position: relative;
+  }
+  .step { text-align: center; padding: 32px 24px; position: relative; }
+  .step-num {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--crimson));
+    color: var(--black); font-family: 'Cinzel', serif; font-weight: 900; font-size: 20px;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+    position: relative; z-index: 1;
+  }
+  .step-title { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 600; color: var(--cream); margin-bottom: 10px; }
+  .step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+  .step-arrow {
+    position: absolute; top: 60px; right: -16px; z-index: 2;
+    color: var(--gold); opacity: 0.35; font-size: 24px;
+  }
+  @media (max-width: 640px) { .step-arrow { display: none; } }
+
+  /* ========== DUM PROCESS ========== */
+  .dum-timeline {
+    display: flex; gap: 0; position: relative; overflow-x: auto; padding-bottom: 16px;
+  }
+  .dum-timeline::before {
+    content: ''; position: absolute; top: 28px; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--crimson), var(--gold));
+    z-index: 0;
+  }
+  .dum-step {
+    flex: 1; min-width: 140px; text-align: center; padding: 0 12px;
+    position: relative; z-index: 1;
+  }
+  .dum-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--black); border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+    margin: 0 auto 16px;
+  }
+  .dum-step-num { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+  .dum-step-name { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600; color: var(--cream); margin-bottom: 6px; }
+  .dum-step-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+  /* ========== REVIEWS ========== */
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .review-card {
+    background: #100e0b; border: 1px solid rgba(212,148,26,0.13); border-radius: 14px;
+    padding: 22px; transition: border-color 0.3s;
+  }
+  .review-card:hover { border-color: rgba(212,148,26,0.3); }
+  .review-stars { color: var(--gold); font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+  .review-text { font-size: 14px; color: rgba(253,248,239,0.8); line-height: 1.7; margin-bottom: 14px; font-style: italic; }
+  .review-author { display: flex; align-items: center; gap: 10px; }
+  .review-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--crimson));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; color: var(--black);
+  }
+  .review-name { font-size: 14px; font-weight: 600; color: var(--cream); }
+  .review-platform { font-size: 11px; color: var(--text-muted); }
+
+  /* ========== PROMISE ========== */
+  .promise-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .promise-card {
+    text-align: center; padding: 36px 24px;
+    border: 1px solid rgba(212,148,26,0.15); border-radius: 16px;
+    transition: all 0.3s;
+  }
+  .promise-card:hover { border-color: var(--gold); background: var(--gold-dim); transform: translateY(-4px); }
+  .promise-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+  .promise-title { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 600; color: var(--cream); margin-bottom: 8px; }
+  .promise-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ========== ABOUT PAGE ========== */
+  .about-hero {
+    min-height: 55vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 120px 24px 60px;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(212,148,26,0.08), transparent);
+  }
+  .about-story { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 768px) { .about-story { grid-template-columns: 1fr; } }
+  .about-img-placeholder {
+    aspect-ratio: 4/5; border-radius: 20px; overflow: hidden;
+    background: repeating-linear-gradient(-45deg, #1a1510 0, #1a1510 10px, #1c1712 10px, #1c1712 20px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+    border: 1px solid rgba(212,148,26,0.15);
+  }
+  .about-img-placeholder span { font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em; text-align: center; max-width: 200px; }
+  .about-text h2 { font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 36px); font-weight: 700; color: var(--cream); margin-bottom: 20px; line-height: 1.2; }
+  .about-text h2 span { color: var(--gold); }
+  .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+  .about-text p strong { color: var(--cream); }
+  .timeline { padding: 20px 0; }
+  .timeline-item { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(212,148,26,0.08); }
+  .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 4px; }
+  .timeline-content h4 { font-family: 'Cinzel', serif; font-size: 15px; color: var(--gold); margin-bottom: 4px; }
+  .timeline-content p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ========== ORDER PAGE ========== */
+  .order-hero { padding: 120px 24px 60px; text-align: center; }
+  .order-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 880px; margin: 0 auto; }
+  .order-card {
+    border-radius: 18px; border: 1px solid rgba(212,148,26,0.15);
+    padding: 36px 28px; text-align: center; background: #100e0b;
+    transition: all 0.3s; position: relative;
+  }
+  .order-card.featured { border-color: var(--gold); }
+  .order-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  .order-card-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--black); font-size: 11px; font-weight: 700;
+    padding: 4px 14px; border-radius: 20px; letter-spacing: 0.06em; white-space: nowrap;
+  }
+  .order-platform-icon { font-size: 48px; margin-bottom: 16px; display: block; }
+  .order-card-title { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700; color: var(--cream); margin-bottom: 8px; }
+  .order-card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px; }
+  .btn-zomato { background: #E23744; color: white; border: none; padding: 13px 28px; border-radius: 28px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; font-family: 'Outfit', sans-serif; transition: all 0.2s; text-decoration: none; display: block; }
+  .btn-zomato:hover { background: #c92f3b; transform: translateY(-1px); }
+  .btn-wa-green { background: #25D366; color: white; border: none; padding: 13px 28px; border-radius: 28px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; font-family: 'Outfit', sans-serif; transition: all 0.2s; text-decoration: none; display: block; }
+  .btn-wa-green:hover { background: #1db954; transform: translateY(-1px); }
+  .btn-disabled { background: #2a2622; color: rgba(253,248,239,0.3); border: 1px solid rgba(253,248,239,0.08); border-radius: 28px; padding: 13px 28px; font-size: 14px; cursor: not-allowed; width: 100%; font-family: 'Outfit', sans-serif; }
+  .benefits-row { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-top: 48px; }
+  .benefit-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-muted); }
+  .benefit-item span:first-child { color: var(--gold); font-size: 18px; }
+
+  /* ========== CONTACT PAGE ========== */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-card { background: #100e0b; border: 1px solid rgba(212,148,26,0.15); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+  .contact-card h3 { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold); margin-bottom: 16px; }
+  .contact-action { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--cream); padding: 12px 0; border-bottom: 1px solid rgba(212,148,26,0.08); }
+  .contact-action:last-child { border-bottom: none; }
+  .contact-action:hover { color: var(--gold); }
+  .contact-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--gold-dim); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .contact-label { font-size: 13px; color: var(--text-muted); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .contact-value { font-size: 16px; font-weight: 600; }
+  .map-placeholder {
+    aspect-ratio: 4/3; border-radius: 16px; overflow: hidden;
+    background: repeating-linear-gradient(-45deg, #100e0b 0, #100e0b 12px, #131008 12px, #131008 24px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    border: 1px solid rgba(212,148,26,0.15); position: relative;
+  }
+  .map-placeholder span { font-size: 13px; color: var(--text-muted); text-align: center; text-transform: uppercase; letter-spacing: 0.1em; }
+  .map-pin { font-size: 40px; }
+  .map-label {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    background: rgba(10,8,6,0.9); border: 1px solid rgba(212,148,26,0.3);
+    border-radius: 20px; padding: 8px 16px;
+    font-size: 13px; color: var(--cream); white-space: nowrap;
+  }
+  .faq-item { border-bottom: 1px solid rgba(212,148,26,0.1); }
+  .faq-q {
+    padding: 18px 0; display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; font-size: 15px; font-weight: 500; color: var(--cream);
+    gap: 16px;
+  }
+  .faq-q:hover { color: var(--gold); }
+  .faq-q .faq-icon { color: var(--gold); font-size: 18px; flex-shrink: 0; transition: transform 0.3s; }
+  .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; padding: 0 0 18px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  /* ========== FULL MENU PAGE ========== */
+  .menu-page { padding-top: 96px; }
+  .menu-category { margin-bottom: 56px; }
+  .menu-cat-title {
+    font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--cream);
+    margin-bottom: 6px; display: flex; align-items: center; gap: 12px;
+  }
+  .menu-cat-title span { color: var(--gold); }
+  .menu-cat-line { height: 1px; background: linear-gradient(90deg, rgba(212,148,26,0.4), transparent); margin-bottom: 24px; }
+  .full-menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .full-menu-item {
+    background: #100e0b; border: 1px solid rgba(212,148,26,0.1); border-radius: 14px;
+    padding: 18px; display: flex; gap: 16px; align-items: flex-start;
+    transition: all 0.25s; position: relative;
+  }
+  .full-menu-item:hover { border-color: rgba(212,148,26,0.3); background: #141109; }
+  .item-img-small {
+    width: 80px; height: 80px; border-radius: 10px; flex-shrink: 0;
+    background: repeating-linear-gradient(-45deg, #1a1510 0, #1a1510 6px, #1c1712 6px, #1c1712 12px);
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+    overflow: hidden;
+  }
+  .item-info { flex: 1; min-width: 0; }
+  .item-name { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--cream); margin-bottom: 4px; line-height: 1.3; }
+  .item-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 8px; }
+  .item-serving-tag { font-size: 11px; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+  .item-price-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .item-prices { display: flex; align-items: baseline; gap: 6px; }
+  .item-price { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--gold); }
+  .item-mrp { font-size: 12px; color: var(--text-muted); text-decoration: line-through; }
+  .item-badge { background: #15803d; color: #86efac; font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 10px; }
+  .btn-wa-order {
+    background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25); color: #4ade80;
+    font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 20px; cursor: pointer;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    transition: all 0.2s; white-space: nowrap; font-family: 'Outfit', sans-serif;
+  }
+  .btn-wa-order:hover { background: rgba(37,211,102,0.2); border-color: #4ade80; }
+  .nonveg-inline { width: 16px; height: 16px; border: 1.5px solid var(--crimson); border-radius: 2px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .nonveg-inline::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--crimson); }
+  .veg-inline { width: 16px; height: 16px; border: 1.5px solid #4ade80; border-radius: 2px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .veg-inline::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; }
+  .item-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: #060504; border-top: 1px solid rgba(212,148,26,0.15);
+    padding: 48px 24px 100px;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .footer-brand-name { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+  .footer-tagline { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; font-style: italic; }
+  .footer-contact-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .footer-btn {
+    padding: 10px 16px; border-radius: 22px; font-size: 13px; font-weight: 600;
+    cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    transition: all 0.2s;
+  }
+  .footer-btn-wa { background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.3); color: #4ade80; }
+  .footer-btn-wa:hover { background: rgba(37,211,102,0.25); }
+  .footer-btn-z { background: rgba(226,55,68,0.12); border: 1px solid rgba(226,55,68,0.3); color: #f87171; }
+  .footer-btn-z:hover { background: rgba(226,55,68,0.22); }
+  .footer-col h4 { font-family: 'Cinzel', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+  .footer-col ul li a:hover { color: var(--cream); }
+  .footer-hours-item { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .footer-hours-item strong { color: var(--cream); }
+  .footer-bottom { border-top: 1px solid rgba(212,148,26,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-bottom p { font-size: 13px; color: rgba(253,248,239,0.3); }
+  .footer-fssai { font-size: 12px; color: rgba(253,248,239,0.25); }
+
+  /* ========== SCROLL ANIMATIONS ========== */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ========== MISC ========== */
+  .text-center { text-align: center; }
+  .text-gold { color: var(--gold); }
+  .text-crimson { color: var(--crimson); }
+  .mt-8 { margin-top: 8px; }
+  .mb-16 { margin-bottom: 16px; }
+  .mb-48 { margin-bottom: 48px; }
+  .hindi-quote {
+    font-family: 'Cinzel', serif; font-size: clamp(16px, 3vw, 24px); color: var(--gold);
+    text-align: center; padding: 32px 24px; font-style: italic; opacity: 0.85;
+    border-top: 1px solid rgba(212,148,26,0.12); border-bottom: 1px solid rgba(212,148,26,0.12);
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20from%20Rangat%20Biryani" target="_blank" class="float-wa" title="Order on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.554 4.12 1.524 5.854L.036 23.591a.75.75 0 00.972.899l5.9-1.9A11.936 11.936 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.508-5.182-1.396l-.371-.22-3.843 1.237 1.173-3.718-.242-.384A9.962 9.962 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- REPLACE THIS HREF WITH YOUR ACTUAL ZOMATO LISTING URL -->
+<a href="https://www.zomato.com" target="_blank" class="float-zomato" title="Order on Zomato">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="12"/><text x="12" y="16" font-size="10" fill="#E23744" text-anchor="middle" font-weight="bold">Z</text></svg>
+  Order on Zomato
+</a>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="showPage('home')">
+    <img src="uploads/Asset 7.png" alt="Rangat Biryani" style="height:44px;mix-blend-mode:screen;filter:brightness(1.05);">
+  </a>
+  <div class="nav-links">
+    <a onclick="showPage('home')" class="active" id="nav-home">Home</a>
+    <a onclick="showPage('menu')" id="nav-menu">Full Menu</a>
+    <a onclick="showPage('about')" id="nav-about">About</a>
+    <a onclick="showPage('contact')" id="nav-contact">Contact</a>
+    <a onclick="showPage('order')" class="nav-cta" id="nav-order">Order Now →</a>
+  </div>
+  <div class="hamburger" onclick="toggleMobileMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');closeMobileMenu()">🏠 Home</a>
+  <a onclick="showPage('menu');closeMobileMenu()">📋 Full Menu</a>
+  <a onclick="showPage('about');closeMobileMenu()">✨ About</a>
+  <a onclick="showPage('contact');closeMobileMenu()">📍 Contact</a>
+  <a onclick="showPage('order');closeMobileMenu()" class="mobile-cta">🔥 Order Now</a>
+</div>
+
+<!-- URGENCY BANNER -->
+<div id="urgency-banner">
+  <span id="kitchen-status-banner"></span>
+</div>
+
+<!-- ======================= HOME PAGE ======================= -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-crown-logo"><img src="uploads/Asset 7.png" alt="Rangat Biryani Logo" style="width:260px;max-width:70vw;mix-blend-mode:screen;filter:brightness(1.1) contrast(1.05);margin-bottom:8px;"></div>
+      <div class="hero-label">Sainik Nagar · Uttam Nagar · West Delhi</div>
+      <p class="hero-tagline" style="margin-top:4px;">The Color of Real Biryani</p>
+      <p class="hero-sub">
+        <em>Aaj ki dum ready hai 🔥</em><br>
+        Real saffron. Aged basmati. 45 minutes of slow dum.<br>
+        Ghar jaisi biryani, delivered to your door.
+      </p>
+      <div class="hero-btns">
+        <!-- REPLACE href WITH YOUR ACTUAL ZOMATO LISTING URL -->
+        <a href="https://www.zomato.com" target="_blank" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><text x="12" y="16" font-size="10" fill="#E23744" text-anchor="middle" font-weight="bold">Z</text></svg>
+          Order on Zomato
+        </a>
+        <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20from%20Rangat%20Biryani" target="_blank" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.554 4.12 1.524 5.854L.036 23.591a.75.75 0 00.972.899l5.9-1.9A11.936 11.936 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.508-5.182-1.396l-.371-.22-3.843 1.237 1.173-3.718-.242-.384A9.962 9.962 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Order on WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">45 min</div><div class="hero-stat-label">Dum Cooking</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">5–11 PM</div><div class="hero-stat-label">Daily Fresh</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">Free</div><div class="hero-stat-label">Delivery 2 km</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">FSSAI</div><div class="hero-stat-label">Licensed</div></div>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- WHY RANGAT -->
+  <div class="section-full alt-bg">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="section-header text-center reveal">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">Why <span>Rangat?</span></h2>
+          <div class="gold-divider center"></div>
+          <p class="section-desc" style="margin: 0 auto; text-align: center;">Not a factory. A kitchen.<br>Your neighbourhood's biryani ritual.</p>
+        </div>
+        <div class="features-grid" style="margin-top: 48px;">
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">🌸</div>
+            <div class="feature-title">Real Saffron Dum</div>
+            <p class="feature-desc">Every single batch uses real kesar — not food colour. The golden hue you see is earned, not faked.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">🛵</div>
+            <div class="feature-title">Free Delivery 2 km</div>
+            <p class="feature-desc">Direct orders within 2 km of Sainik Nagar get free delivery. No hidden charges, no platform fees.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon">🍚</div>
+            <div class="feature-title">Fresh Daily Batches</div>
+            <p class="feature-desc">We cook every evening from 5 PM. Limited batches mean you get biryani that was made today — never reheated.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-4">
+            <div class="feature-icon">🏠</div>
+            <div class="feature-title">Home Kitchen Quality</div>
+            <p class="feature-desc">FSSAI-licensed home cloud kitchen. The same care a mother puts into food — with the consistency of a professional recipe.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- MENU PREVIEW -->
+  <div class="section-full">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="section-header reveal">
+          <span class="section-label">Bestsellers</span>
+          <h2 class="section-title">Our <span>Signature Biryanis</span></h2>
+          <div class="gold-divider"></div>
+          <p class="section-desc">Dum se bani. Dil se parosi.</p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-card reveal reveal-delay-1">
+            <div class="menu-card-img">
+<img src="uploads/Solo-rangat.jpg" alt="Solo Rangat Chicken Biryani" style="width:100%;height:100%;object-fit:cover;">
+              
+              <div class="nonveg-dot"></div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-title">Solo Rangat</div>
+              <div class="menu-card-desc">250g biryani, 2 chicken pieces, 1 boiled egg, raita & onion slices</div>
+              <div class="menu-card-serving">Serves 1 · Chicken Dum Biryani</div>
+              <div class="menu-card-price">
+                <span class="price-current">₹149</span>
+                
+              </div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Solo%20Rangat%20Chicken%20Biryani%20(₹149)" target="_blank" class="btn-order-card">Order Now →</a>
+            </div>
+          </div>
+          <div class="menu-card reveal reveal-delay-2">
+            <div class="menu-card-img">
+<img src="uploads/Nawab-Feast.jpg" alt="Nawab's Feast Chicken Biryani" style="width:100%;height:100%;object-fit:cover;">
+              
+              <div class="nonveg-dot"></div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-title">Nawab's Feast</div>
+              <div class="menu-card-desc">500g biryani, 4 chicken pieces, 2 boiled eggs, raita & onion slices</div>
+              <div class="menu-card-serving">Serves 2–3 · Chicken Dum Biryani</div>
+              <div class="menu-card-price">
+                <span class="price-current">₹279</span>
+                
+              </div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Nawab's%20Feast%20Chicken%20Biryani%20(₹279)" target="_blank" class="btn-order-card">Order Now →</a>
+            </div>
+          </div>
+          <div class="menu-card reveal reveal-delay-3">
+            <div class="menu-card-img">
+<img src="uploads/Egg-biryani_02.jpg" alt="Rangat Anda Biryani" style="width:100%;height:100%;object-fit:cover;">
+              
+              <div class="nonveg-dot"></div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-title">Rangat Anda Biryani</div>
+              <div class="menu-card-desc">2 whole eggs slow-cooked in saffron dum rice — rich, fragrant, deeply satisfying</div>
+              <div class="menu-card-serving">Serves 1 · Egg Dum Biryani</div>
+              <div class="menu-card-price">
+                <span class="price-current">₹139</span>
+              </div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Rangat%20Anda%20Biryani%20(₹139)" target="_blank" class="btn-order-card">Order Now →</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center" style="margin-top: 32px;">
+          <button onclick="showPage('menu')" class="btn-primary" style="margin: 0 auto;">View Full Menu →</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- DUM PROCESS -->
+  <div class="section-full alt-bg">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="section-header text-center reveal">
+          <span class="section-label">The Process</span>
+          <h2 class="section-title text-center">The <span>Dum Process</span></h2>
+          <div class="gold-divider center"></div>
+          <p class="section-desc" style="margin: 0 auto; text-align: center;">From raw ingredients to your door — every step matters.</p>
+        </div>
+        <div class="dum-timeline" style="margin-top: 56px;" id="dumTimeline">
+          <div class="dum-step reveal">
+            <div class="dum-icon">🥩</div>
+            <div class="dum-step-num">Step 01</div>
+            <div class="dum-step-name">Marination</div>
+            <div class="dum-step-desc">Chicken marinated overnight in yoghurt, spices & kachri powder</div>
+          </div>
+          <div class="dum-step reveal reveal-delay-1">
+            <div class="dum-icon">🍚</div>
+            <div class="dum-step-num">Step 02</div>
+            <div class="dum-step-name">Par-Boil Rice</div>
+            <div class="dum-step-desc">Aged basmati par-cooked in whole spices — shah jeera, bay leaf, clove</div>
+          </div>
+          <div class="dum-step reveal reveal-delay-2">
+            <div class="dum-icon">🌸</div>
+            <div class="dum-step-num">Step 03</div>
+            <div class="dum-step-name">Saffron Layer</div>
+            <div class="dum-step-desc">Real kesar soaked in warm milk — layered over the masala & rice</div>
+          </div>
+          <div class="dum-step reveal reveal-delay-3">
+            <div class="dum-icon">🫙</div>
+            <div class="dum-step-num">Step 04</div>
+            <div class="dum-step-name">Seal the Deg</div>
+            <div class="dum-step-desc">The deg is sealed with atta dough — trapping every drop of aroma inside</div>
+          </div>
+          <div class="dum-step reveal reveal-delay-4">
+            <div class="dum-icon">🔥</div>
+            <div class="dum-step-num">Step 05</div>
+            <div class="dum-step-name">45-min Dum</div>
+            <div class="dum-step-desc">Slow fire below, tawa on top. 45 minutes of patient, perfect dum cooking</div>
+          </div>
+          <div class="dum-step reveal reveal-delay-4">
+            <div class="dum-icon">🛵</div>
+            <div class="dum-step-num">Step 06</div>
+            <div class="dum-step-name">Your Door</div>
+            <div class="dum-step-desc">Packed hot, delivered within 20 minutes. The rangat intact.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- HOW TO ORDER -->
+  <div class="section-full">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="section-header text-center reveal">
+          <span class="section-label">Ordering</span>
+          <h2 class="section-title text-center">How to <span>Order</span></h2>
+          <div class="gold-divider center"></div>
+        </div>
+        <div class="steps-row">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <div class="step-title">Choose Your Rangat</div>
+            <p class="step-desc">Browse our menu. Pick your biryani — Solo, Nawab's Feast, or the full Rangat Table. Add extras as you please.</p>
+            <div class="step-arrow">→</div>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <div class="step-num">2</div>
+            <div class="step-title">Order on Zomato or WhatsApp</div>
+            <p class="step-desc">Hit Order on Zomato for tracked delivery, or message us on WhatsApp for a direct order (zero platform fee).</p>
+            <div class="step-arrow">→</div>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-num">3</div>
+            <div class="step-title">Delivered Hot in 20 Min</div>
+            <p class="step-desc">Your biryani arrives fresh from the dum — sealed, fragrant, and exactly as it should be.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- THE RANGAT PROMISE -->
+  <div class="section-full alt-bg">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="section-header text-center reveal">
+          <span class="section-label">Our Commitment</span>
+          <h2 class="section-title text-center">The <span>Rangat Promise</span></h2>
+          <div class="gold-divider center"></div>
+        </div>
+        <div class="promise-row" style="margin-top: 48px;">
+          <div class="promise-card reveal reveal-delay-1">
+            <span class="promise-icon">📐</span>
+            <div class="promise-title">Same Recipe, Every Day</div>
+            <p class="promise-desc">The masala ratio hasn't changed since Day 1. Consistency is our religion.</p>
+          </div>
+          <div class="promise-card reveal reveal-delay-2">
+            <span class="promise-icon">🌸</span>
+            <div class="promise-title">Real Saffron, Every Batch</div>
+            <p class="promise-desc">No artificial colour. No shortcuts. If the saffron runs out, we don't cook that day.</p>
+          </div>
+          <div class="promise-card reveal reveal-delay-3">
+            <span class="promise-icon">⚡</span>
+            <div class="promise-title">Delivered in 20 Minutes</div>
+            <p class="promise-desc">We only deliver within 2 km for a reason — so it reaches you hot, not warm.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="section-full">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="section-header reveal">
+          <span class="section-label">Zomato Reviews</span>
+          <h2 class="section-title">What People <span>Are Saying</span></h2>
+          <div class="gold-divider"></div>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card reveal reveal-delay-1">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Bhai sach mein ghar jaisi biryani hai. The saffron colour is real — you can tell the difference. Order karo, regret nahi hoga."</p>
+            <div class="review-author">
+              <div class="review-avatar">R</div>
+              <div><div class="review-name">Rahul S.</div><div class="review-platform">Zomato · Uttam Nagar</div></div>
+            </div>
+          </div>
+          <div class="review-card reveal reveal-delay-2">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Nawab's Feast for two was perfect. Rice texture was spot on — each grain separate. The chicken was fall-off-the-bone soft. 10/10."</p>
+            <div class="review-author">
+              <div class="review-avatar">P</div>
+              <div><div class="review-name">Priya M.</div><div class="review-platform">Zomato · Sainik Nagar</div></div>
+            </div>
+          </div>
+          <div class="review-card reveal reveal-delay-3">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Ordered the Office Darbar Pack for our team. Everyone loved it. The aroma when we opened the packaging — pure dum magic. Will reorder."</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div><div class="review-name">Amit K.</div><div class="review-platform">Zomato · Dwarka</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ABOUT SNIPPET -->
+  <div class="section-full alt-bg">
+    <div class="section-inner">
+      <section style="padding: 0;">
+        <div class="hindi-quote reveal">"Dum se bani. Dil se parosi."<br><span style="font-size: 14px; opacity: 0.6; font-family: Outfit, sans-serif;">Made with dum. Served with heart.</span></div>
+        <div style="height: 48px;"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;" class="about-story">
+          <div class="reveal">
+            <span class="section-label">The Story</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 36px); color: var(--cream); margin-bottom: 16px; line-height: 1.2;">What Does <span style="color: var(--gold);">Rangat</span> Mean?</h2>
+            <div class="gold-divider"></div>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;">"Rangat" is a Punjabi word that captures everything real biryani should be — the colour, the aroma, the soul. That deep golden hue that only real kesar and slow dum can create.</p>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px;">This kitchen was born from a simple obsession: the best biryani Govind ever ate was made at home. Not in a restaurant. Not in a factory. In a kitchen, with patience and real ingredients.</p>
+            <button onclick="showPage('about')" class="btn-primary" style="display: inline-flex;">Read the Full Story →</button>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="about-img-placeholder" style="display:block;padding:0;">
+  <img src="uploads/The-Rangat-Table.jpg" alt="Rangat Biryani" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <img src="uploads/Asset 7.png" alt="Rangat Biryani" style="height:80px;mix-blend-mode:screen;margin-bottom:12px;display:block;">
+          <div class="footer-tagline">The Color of Real Biryani</div>
+          <div class="footer-contact-btns">
+            <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20from%20Rangat%20Biryani" target="_blank" class="footer-btn footer-btn-wa">
+              WhatsApp Order
+            </a>
+            <!-- REPLACE href WITH YOUR ACTUAL ZOMATO LISTING URL -->
+            <a href="https://www.zomato.com" target="_blank" class="footer-btn footer-btn-z">
+              Zomato
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('menu')">Full Menu</a></li>
+            <li><a onclick="showPage('order')">Order Now</a></li>
+            <li><a onclick="showPage('about')">About Us</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours & Info</h4>
+          <div class="footer-hours-item"><strong>Open:</strong> 5 PM – 11 PM</div>
+          <div class="footer-hours-item"><strong>Days:</strong> Every Day</div>
+          <div class="footer-hours-item"><strong>Area:</strong> 2 km radius, Sainik Nagar</div>
+          <div class="footer-hours-item"><strong>Phone:</strong> +91 97161 12949</div>
+          <div class="footer-hours-item" style="margin-top: 12px;"><strong style="color: var(--gold); font-size: 11px;">FSSAI Licensed Home Kitchen</strong></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Rangat Biryani · Sainik Nagar, Uttam Nagar, West Delhi – 110059</p>
+        <p class="footer-fssai">FSSAI Licensed · Premium Home Cloud Kitchen</p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end home page -->
+
+
+<!-- ======================= FULL MENU PAGE ======================= -->
+<div class="page" id="page-menu">
+  <div class="menu-page" style="padding: 96px 24px 60px; max-width: 1100px; margin: 0 auto;">
+
+    <div class="section-header text-center" style="margin-bottom: 48px;">
+      <span class="section-label">Complete Menu</span>
+      <h1 class="section-title text-center">Our <span>Full Menu</span></h1>
+      <div class="gold-divider center"></div>
+      <p class="section-desc" style="margin: 0 auto; text-align: center; margin-top: 12px;">Fresh every evening from 5 PM. Limited batches daily.</p>
+    </div>
+
+    <!-- CHICKEN DUM BIRYANI -->
+    <div class="menu-category">
+      <div class="menu-cat-title">👑 Chicken Dum <span>Biryani</span></div>
+      <div class="menu-cat-line"></div>
+      <div class="full-menu-grid">
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Solo-rangat.jpg" alt="Solo Rangat" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Solo Rangat</span></div>
+            <div class="item-desc">250g, 2 chicken pieces, 1 boiled egg, raita, onion slices</div>
+            <div class="item-serving-tag">Serves 1</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹149</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Solo%20Rangat%20(₹149)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Nawab-Feast.jpg" alt="Nawab's Feast" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Nawab's Feast</span></div>
+            <div class="item-desc">500g, 4 chicken pieces, 2 boiled eggs, raita, onion slices</div>
+            <div class="item-serving-tag">Serves 2–3</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹279</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Nawab's%20Feast%20(₹279)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/The-Rangat-Table.jpg" alt="The Rangat Table" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">The Rangat Table</span></div>
+            <div class="item-desc">1kg, 8 chicken pieces, 4 boiled eggs, raita, onion slices</div>
+            <div class="item-serving-tag">Serves 4–5</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹599</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20The%20Rangat%20Table%20(₹599)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item" style="border-color: rgba(212,148,26,0.3);">
+<div class="item-img-small" style="background:none;"><img src="uploads/Office-Darbar-pack.jpg" alt="Office Darbar Pack" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Office Darbar Pack</span></div>
+            <div class="item-desc">4× Nawab's Feast, 2kg total, 16 pieces, 8 eggs. 2 hr advance order required.</div>
+            <div class="item-serving-tag">Serves 8–10 · Bulk Order</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹1,099</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20the%20Office%20Darbar%20Pack%20(₹1099)%20-%20please%20confirm%20timing" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ANDA SPECIALS -->
+    <div class="menu-category">
+      <div class="menu-cat-title">🥚 Anda <span>Specials</span></div>
+      <div class="menu-cat-line"></div>
+      <div class="full-menu-grid">
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Egg-biryani_02.jpg" alt="Rangat Anda Biryani" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Rangat Anda Biryani</span></div>
+            <div class="item-desc">2 whole eggs slow-cooked in saffron dum rice</div>
+            <div class="item-serving-tag">Serves 1 · Egg Dum Biryani</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹139</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Rangat%20Anda%20Biryani%20(₹139)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Bread-omelette.jpg" alt="Rangat Bread Omelette" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Rangat Bread Omelette</span></div>
+            <div class="item-desc">Thick fluffy masala bread omelette</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹79</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Rangat%20Bread%20Omelette%20(₹79)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Bread-cheese-omelette.jpg" alt="Rangat Cheese Bread Omelette" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Rangat Cheese Bread Omelette</span></div>
+            <div class="item-desc">Masala bread omelette with melted cheese</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹99</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Rangat%20Cheese%20Bread%20Omelette%20(₹99)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Egg-biryani_02.jpg" alt="Nawabi Egg Bhurji" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Nawabi Egg Bhurji</span></div>
+            <div class="item-desc">Desi spiced scrambled eggs — silky, never dry</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹149</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Nawabi%20Egg%20Bhurji%20(₹149)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Egg-biryani_02.jpg" alt="Mughlai Anda Curry" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Mughlai Anda Curry</span></div>
+            <div class="item-desc">Boiled eggs in rich slow-cooked onion-tomato masala with cream</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹129</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Mughlai%20Anda%20Curry%20(₹129)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARANTHA -->
+    <div class="menu-category">
+      <div class="menu-cat-title">🫓 Parantha <span>Special</span></div>
+      <div class="menu-cat-line"></div>
+      <div class="full-menu-grid">
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Tawa-Roti-ghee.jpg" alt="Aloo Parantha" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Aloo Parantha</span></div>
+            <div class="item-desc">2 paranthas stuffed with spiced mashed potato, served with curd and pickle</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹150</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Aloo%20Parantha%20(₹150)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BREADS -->
+    <div class="menu-category">
+      <div class="menu-cat-title">🫓 <span>Breads</span></div>
+      <div class="menu-cat-line"></div>
+      <div class="full-menu-grid">
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Tawa-Roti-ghee.jpg" alt="Tawa Roti" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Tawa Roti</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹15</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Tawa%20Roti%20(₹15)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Tawa-Roti-ghee.jpg" alt="Butter Tawa Roti" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Butter Tawa Roti</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹20</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Butter%20Tawa%20Roti%20(₹20)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+<div class="item-img-small" style="background:none;"><img src="uploads/Tawa-Roti-ghee.jpg" alt="Ghee Tawa Roti" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Ghee Tawa Roti</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹25</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20Ghee%20Tawa%20Roti%20(₹25)" target="_blank" class="btn-wa-order">WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD-ONS -->
+    <div class="menu-category">
+      <div class="menu-cat-title">➕ Add-Ons <span>& Extras</span></div>
+      <div class="menu-cat-line"></div>
+      <div class="full-menu-grid">
+        <div class="full-menu-item">
+          <div class="item-img-small">🥗</div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Extra Raita</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹20</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20add%20Extra%20Raita%20(₹20)" target="_blank" class="btn-wa-order">Add →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+          <div class="item-img-small">🥚</div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Extra Egg (1 pc)</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹20</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20add%20Extra%20Egg%20(₹20)" target="_blank" class="btn-wa-order">Add →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+          <div class="item-img-small">🍗</div>
+          <div class="item-info">
+            <div class="item-header"><span class="nonveg-inline"></span><span class="item-name">Extra Chicken (1 pc)</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹69</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20add%20Extra%20Chicken%20piece%20(₹69)" target="_blank" class="btn-wa-order">Add →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+          <div class="item-img-small">🍮</div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Gulab Jamun (2 pcs)</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹49</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20add%20Gulab%20Jamun%202pcs%20(₹49)" target="_blank" class="btn-wa-order">Add →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+          <div class="item-img-small">🥗</div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Onion-Lemon Salad</span></div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹20</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20add%20Onion-Lemon%20Salad%20(₹20)" target="_blank" class="btn-wa-order">Add →</a>
+            </div>
+          </div>
+        </div>
+        <div class="full-menu-item">
+          <div class="item-img-small">🥤</div>
+          <div class="item-info">
+            <div class="item-header"><span class="veg-inline"></span><span class="item-name">Cold Drink (250ml)</span></div>
+            <div class="item-desc">Pepsi / Coke</div>
+            <div class="item-price-row">
+              <div class="item-prices"><span class="item-price">₹30</span></div>
+              <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20add%20Cold%20Drink%20(₹30)" target="_blank" class="btn-wa-order">Add →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #100e0b; border: 1px solid rgba(212,148,26,0.2); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 60px;">
+      <p style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 16px; margin-bottom: 8px;">Ready to Order?</p>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Order directly via WhatsApp for zero platform fees, or find us on Zomato.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20place%20an%20order%20from%20Rangat%20Biryani" target="_blank" class="btn-secondary">WhatsApp Order</a>
+        <!-- REPLACE href WITH YOUR ACTUAL ZOMATO LISTING URL -->
+        <a href="https://www.zomato.com" target="_blank" class="btn-primary">Order on Zomato</a>
+      </div>
+    </div>
+
+  </div>
+</div><!-- end menu page -->
+
+
+<!-- ======================= ORDER PAGE ======================= -->
+<div class="page" id="page-order">
+  <div style="padding-top: 96px;">
+    <div class="order-hero">
+      <span class="section-label">Hungry?</span>
+      <h1 class="section-title">Order <span>Rangat Biryani</span></h1>
+      <div class="gold-divider center"></div>
+      <p class="section-desc" style="margin: 12px auto 0; text-align: center;">Choose how you want your biryani. We're available on Zomato, and directly on WhatsApp.</p>
+    </div>
+
+    <div style="padding: 0 24px 80px; max-width: 1000px; margin: 0 auto;">
+      <div class="order-cards">
+
+        <div class="order-card featured" style="position: relative;">
+          <div class="order-card-badge">Most Popular</div>
+          <span class="order-platform-icon">🛵</span>
+          <div class="order-card-title">Order on Zomato</div>
+          <p class="order-card-desc">Track your order live. Secure payment. Available on the Zomato app and website.</p>
+          <!-- REPLACE href WITH YOUR ACTUAL ZOMATO LISTING URL -->
+          <a href="https://www.zomato.com" target="_blank" class="btn-zomato">Open on Zomato →</a>
+        </div>
+
+        <div class="order-card">
+          <span class="order-platform-icon">💬</span>
+          <div class="order-card-title">Order on WhatsApp</div>
+          <p class="order-card-desc">Direct order, zero platform fees. Free delivery within 2 km on direct orders. Fast & personal.</p>
+          <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20place%20an%20order%20from%20Rangat%20Biryani.%20Please%20share%20the%20menu." target="_blank" class="btn-wa-green">Chat on WhatsApp →</a>
+        </div>
+
+        <div class="order-card" style="opacity: 0.6;">
+          <span class="order-platform-icon">🍽️</span>
+          <div class="order-card-title">Swiggy</div>
+          <p class="order-card-desc">We're coming to Swiggy soon! Until then, order on Zomato or WhatsApp.</p>
+          <div class="btn-disabled">Coming Soon</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 56px; border-top: 1px solid rgba(212,148,26,0.12); padding-top: 48px;">
+        <h3 style="font-family: 'Cinzel', serif; color: var(--cream); text-align: center; margin-bottom: 32px; font-size: 20px;">Benefits of <span style="color: var(--gold);">Ordering Direct</span></h3>
+        <div class="benefits-row">
+          <div class="benefit-item"><span>✦</span><span>Zero platform fees — you pay only for food</span></div>
+          <div class="benefit-item"><span>✦</span><span>Free delivery within 2 km radius</span></div>
+          <div class="benefit-item"><span>✦</span><span>Customise your order (extra spicy, less oil, etc.)</span></div>
+          <div class="benefit-item"><span>✦</span><span>Direct support — your order is our priority</span></div>
+          <div class="benefit-item"><span>✦</span><span>Exclusive WhatsApp-only offers sometimes</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 48px; background: linear-gradient(135deg, rgba(212,148,26,0.08), rgba(232,41,58,0.06)); border: 1px solid rgba(212,148,26,0.2); border-radius: 16px; padding: 28px; text-align: center;">
+        <p style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 18px; margin-bottom: 8px;">📞 Call to Order</p>
+        <a href="tel:+919716112949" style="font-family: 'Cinzel', serif; font-size: 28px; font-weight: 700; color: var(--cream); text-decoration: none; display: block; margin-bottom: 8px;">+91 97161 12949</a>
+        <p style="font-size: 14px; color: var(--text-muted);">Kitchen open 5 PM – 11 PM daily · Sainik Nagar, Uttam Nagar</p>
+      </div>
+    </div>
+  </div>
+</div><!-- end order page -->
+
+
+<!-- ======================= ABOUT PAGE ======================= -->
+<div class="page" id="page-about">
+  <div style="padding-top: 96px;">
+
+    <div class="about-hero">
+      <div style="max-width: 700px;">
+        <span class="section-label">Our Story</span>
+        <h1 class="section-title">The Soul of <span>Rangat</span></h1>
+        <div class="gold-divider center"></div>
+        <p style="font-size: 18px; color: var(--text-muted); line-height: 1.8; margin-top: 16px; font-style: italic;">"Rangat is not just a colour. It is the proof that the biryani was made right."</p>
+      </div>
+    </div>
+
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px 80px;">
+
+      <div class="about-story" style="margin-bottom: 80px;">
+        <div class="about-text">
+          <h2>What Does <span>Rangat</span> Mean?</h2>
+          <p><strong>Rangat</strong> is a Punjabi word that doesn't translate cleanly. It means the colour — but not just any colour. It's the specific, warm, golden-saffron hue that rises from a biryani that was cooked with patience and real ingredients.</p>
+          <p>When you lift the dum seal and a cloud of fragrant steam rises — orange-gold, heavy with the smell of kesar, slow-cooked masala and aged basmati — that moment is rangat. That is what we're here to deliver to your door.</p>
+          <p><strong>This kitchen exists because the best biryani Govind ever ate wasn't in a restaurant.</strong> It was made at home. In a regular kitchen. With a cast-iron deg, a slow fire, and no shortcuts.</p>
+        </div>
+        <div>
+          <div class="about-img-placeholder">
+<img src="uploads/Nawab-Feast.jpg" alt="Rangat Biryani Kitchen" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(212,148,26,0.12); padding-top: 64px; margin-bottom: 64px;">
+        <span class="section-label">The Philosophy</span>
+        <h2 style="font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 36px); color: var(--cream); margin-bottom: 16px;">Not a Factory. <span style="color: var(--gold);">A Kitchen.</span></h2>
+        <div class="gold-divider"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 32px;" class="about-story">
+          <div>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.9; margin-bottom: 16px;">Most food delivery businesses scale by cutting corners. A little less meat here, a substitute spice there, an artificial colour to cover what the real saffron should do.</p>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.9; margin-bottom: 16px;">Rangat was built on a different idea: <strong style="color: var(--cream);">deliver less, but deliver it right.</strong> That's why we only operate within 2 km. That's why we limit daily batches. That's why we're never open past 11 PM.</p>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.9;">We'd rather you get one great biryani than us make a hundred mediocre ones.</p>
+          </div>
+          <div>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.9; margin-bottom: 16px;">The saffron we use is real kesar — the kind that turns the rice gold without any help. Every morning, it's soaked in warm milk. Every evening, it goes into the deg.</p>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.9; margin-bottom: 16px;">The basmati is aged. The chicken is marinated overnight. The dum is 45 minutes minimum — sealed with atta dough so nothing escapes.</p>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.9;"><strong style="color: var(--cream);">This is your neighbourhood's biryani ritual.</strong> And it's FSSAI licensed, clean, and consistent.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div style="border-top: 1px solid rgba(212,148,26,0.12); padding-top: 64px; margin-bottom: 64px;">
+        <span class="section-label">Journey</span>
+        <h2 style="font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 36px); color: var(--cream); margin-bottom: 32px;">The <span style="color: var(--gold);">Rangat Story</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>The Obsession Begins</h4>
+              <p>A decade of making biryani at home. Family recipes, trial and error, failure and perfection. The deg becomes a daily companion.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>The Recipe is Fixed</h4>
+              <p>After hundreds of batches, the masala ratio is locked in. The saffron quantity is calibrated. The marination time is decided: overnight, always.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>First Neighbours, Then Friends</h4>
+              <p>Neighbours start asking to buy. Friends place orders. The feedback is unanimous: "This is the biryani I've been looking for."</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>FSSAI License & Cloud Kitchen Launch</h4>
+              <p>Rangat Biryani becomes official. FSSAI licensed. Zomato listing live. WhatsApp ordering enabled. Sainik Nagar, Uttam Nagar — this is home.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Today</h4>
+              <p>Every evening, the deg fills. The saffron is soaked. The atta seal is broken at exactly the right moment. Your order is on its way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(212,148,26,0.08), rgba(232,41,58,0.05)); border: 1px solid rgba(212,148,26,0.2); border-radius: 20px; padding: 40px; text-align: center;">
+        <p style="font-family: 'Cinzel', serif; font-size: clamp(18px, 3vw, 28px); color: var(--cream); margin-bottom: 12px; line-height: 1.4;">"Ghar jaisi biryani, delivered to your door."</p>
+        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 28px;">This is our only promise. And we keep it every evening.</p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button onclick="showPage('menu')" class="btn-primary">View Our Menu</button>
+          <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20from%20Rangat%20Biryani" target="_blank" class="btn-secondary">Order on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- end about page -->
+
+
+<!-- ======================= CONTACT PAGE ======================= -->
+<div class="page" id="page-contact">
+  <div style="padding-top: 96px; max-width: 1100px; margin: 0 auto; padding-left: 24px; padding-right: 24px; padding-bottom: 80px;">
+
+    <div style="text-align: center; margin-bottom: 48px; padding-top: 32px;">
+      <span class="section-label">Get in Touch</span>
+      <h1 class="section-title">Contact <span>Us</span></h1>
+      <div class="gold-divider center"></div>
+      <p style="font-size: 15px; color: var(--text-muted); margin-top: 12px;">Kitchen open 5 PM to 11 PM daily · Sainik Nagar, Uttam Nagar, West Delhi</p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <h3>📞 Reach Us</h3>
+          <a href="tel:+919716112949" class="contact-action">
+            <div class="contact-icon">📞</div>
+            <div><div class="contact-label">Call to Order</div><div class="contact-value">+91 97161 12949</div></div>
+          </a>
+          <a href="https://wa.me/919716112949?text=Hi%2C%20I%20want%20to%20order%20from%20Rangat%20Biryani" target="_blank" class="contact-action">
+            <div class="contact-icon">💬</div>
+            <div><div class="contact-label">WhatsApp</div><div class="contact-value">Order on WhatsApp</div></div>
+          </a>
+          <!-- REPLACE href WITH YOUR ACTUAL ZOMATO LISTING URL -->
+          <a href="https://www.zomato.com" target="_blank" class="contact-action">
+            <div class="contact-icon">🍽️</div>
+            <div><div class="contact-label">Zomato</div><div class="contact-value">Find us on Zomato</div></div>
+          </a>
+        </div>
+        <div class="contact-card">
+          <h3>🕐 Operating Hours</h3>
+          <div style="font-size: 15px; color: var(--text-muted); line-height: 1.8;">
+            <p>Kitchen Open: <strong style="color: var(--cream);">5:00 PM – 11:00 PM</strong></p>
+            <p>Days: <strong style="color: var(--cream);">Every Day</strong></p>
+            <p style="margin-top: 12px; font-size: 13px; color: rgba(253,248,239,0.4);">* Last order accepted by 10:30 PM<br>* Office Darbar Pack requires 2-hour advance notice<br>* Limited daily batches — order early to avoid sellout</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>📍 Delivery Area</h3>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">We deliver within <strong style="color: var(--cream);">2 km radius</strong> of Sainik Nagar, Uttam Nagar, West Delhi (110059).</p>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-top: 8px;">Not sure if you're in the zone? WhatsApp us your address — we'll confirm in seconds.</p>
+          <a href="https://wa.me/919716112949?text=Hi%2C%20can%20you%20deliver%20to%20my%20address%3F" target="_blank" class="btn-secondary" style="margin-top: 16px; display: inline-flex; font-size: 13px; padding: 10px 20px;">Check My Address →</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-placeholder" style="margin-bottom: 20px; height: 280px;">
+          <!-- REPLACE: Embed Google Maps iframe showing 2km radius around Sainik Nagar, Uttam Nagar -->
+          <span class="map-pin">📍</span>
+          <span>Delivery area map<br>Sainik Nagar, Uttam Nagar<br>2 km radius</span>
+          <div class="map-label">Sainik Nagar · Uttam Nagar · 110059</div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="contact-card" style="padding: 24px;">
+          <h3>❓ Frequently Asked Questions</h3>
+          <div id="faqContainer">
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                What time does the kitchen open?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">We open at 5 PM and take orders until 11 PM daily. Batches are fresh every evening — limited quantity.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Do you deliver outside 2 km?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">Currently we only deliver within 2 km of Sainik Nagar on direct orders. On Zomato, their delivery radius may be larger — check the app.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Is delivery free?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">Yes — free delivery on all direct orders (WhatsApp/Call) within 2 km. Zomato orders are subject to Zomato's delivery charges.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                How do I place a bulk order (Office Darbar Pack)?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">WhatsApp or call us at least 2 hours before you want delivery. We'll confirm availability and timing.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Is this a FSSAI-licensed kitchen?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">Yes, Rangat Biryani is a FSSAI-licensed home cloud kitchen. Food safety and cleanliness are non-negotiable.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Do you use real saffron or food colour?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">Real saffron (kesar), always. The colour you see is earned through proper dum cooking — not dye.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- end contact page -->
+
+
+<script>
+// ========== PAGE ROUTING ==========
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => a.classList.remove('active'));
+  const navEl = document.getElementById('nav-' + page);
+  if (navEl) navEl.classList.add('active');
+  window.scrollTo(0, 0);
+  if (page === 'home') initParticles();
+}
+
+// ========== MOBILE MENU ==========
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ========== KITCHEN STATUS ==========
+function updateKitchenStatus() {
+  const now = new Date();
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const totalMin = h * 60 + m;
+  const openMin = 17 * 60;    // 5 PM
+  const closeMin = 23 * 60;   // 11 PM
+  const lastOrderMin = 22 * 60 + 30; // 10:30 PM
+  const isOpen = totalMin >= openMin && totalMin < closeMin;
+  const el = document.getElementById('kitchen-status-banner');
+  if (!el) return;
+  if (isOpen) {
+    const minsLeft = closeMin - totalMin;
+    let msg = `<span class="open"><span class="status-dot"></span></span> Kitchen Open 🟢`;
+    if (totalMin >= lastOrderMin) {
+      msg += ` · Last orders in ${closeMin - totalMin} min — order now!`;
+    } else {
+      msg += ` · Order before 10:30 PM · Fresh dum biryani available`;
+    }
+    el.innerHTML = msg;
+  } else {
+    let nextOpen = '';
+    if (totalMin < openMin) {
+      const diff = openMin - totalMin;
+      nextOpen = `Opens in ${Math.floor(diff/60)}h ${diff%60}m`;
+    } else {
+      nextOpen = 'Opens tomorrow at 5 PM';
+    }
+    el.innerHTML = `<span class="closed"><span class="status-dot"></span></span> Kitchen Closed 🔴 · ${nextOpen} · WhatsApp for advance orders`;
+  }
+}
+updateKitchenStatus();
+setInterval(updateKitchenStatus, 30000);
+
+// ========== PARTICLES ==========
+function initParticles() {
+  const canvas = document.getElementById('particles-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], animId;
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COLORS = ['#D4941A','#E8AB3A','#E8293A','#FDF8EF'];
+  for (let i = 0; i < 70; i++) {
+    particles.push({
+      x: Math.random() * 1000,
+      y: Math.random() * 1000,
+      r: Math.random() * 2 + 0.5,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: -(Math.random() * 0.5 + 0.1),
+      opacity: Math.random() * 0.6 + 0.1,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      life: Math.random(),
+      maxLife: Math.random() * 0.8 + 0.2
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x = (p.x / 1000) * W;
+      p.y = (p.y / 1000) * H;
+      p.life += 0.003;
+      if (p.life > p.maxLife) {
+        p.life = 0;
+        p.x = Math.random() * W;
+        p.y = H + 10;
+      }
+      const alpha = Math.sin((p.life / p.maxLife) * Math.PI) * p.opacity;
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+      p.x = (p.x / W) * 1000 + p.vx;
+      p.y = (p.y / H) * 1000 + p.vy;
+    });
+    animId = requestAnimationFrame(draw);
+  }
+  if (animId) cancelAnimationFrame(animId);
+  draw();
+}
+setTimeout(initParticles, 100);
+
+// ========== SCROLL REVEAL ==========
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+function initReveal() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
+}
+initReveal();
+
+// ========== FAQ ==========
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+
+// ========== PERSIST PAGE ==========
+const savedPage = localStorage.getItem('rangat_page') || 'home';
+showPage(savedPage);
+window.addEventListener('beforeunload', () => {
+  const activePage = document.querySelector('.page.active');
+  if (activePage) localStorage.setItem('rangat_page', activePage.id.replace('page-', ''));
+});
+
+// Override showPage to save
+const _showPage = showPage;
+window.showPage = function(page) {
+  _showPage(page);
+  localStorage.setItem('rangat_page', page);
+  setTimeout(initReveal, 100);
+};
+</script>
+
+</body>
+</html>
